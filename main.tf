@@ -15,6 +15,10 @@ variable "SECRET_KEY" {
   type = string
 }
 
+variable "SESSION_TOKEN" {
+  type = string
+}
+
 provider "aws" {
   # Configuration options
   region = "us-east-2"
