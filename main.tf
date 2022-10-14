@@ -7,13 +7,17 @@ terraform {
   }
 }
 
-locals {
-  region      = "us-east-2"
+variable "ACCESS_KEY" {
+  type = string
+}
+
+variable "SECRET_KEY" {
+  type = string
 }
 
 provider "aws" {
   # Configuration options
-  region = local.region
+  region = "us-east-2"
 
   access_key = var.ACCESS_KEY
   secret_key = var.SECRET_KEY
