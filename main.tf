@@ -14,7 +14,9 @@ locals {
 provider "aws" {
   # Configuration options
   region = local.region
-  profile = "darren1-admin"
+
+  access_key = var.ACCESS_KEY
+  secret_key = var.SECRET_KEY
 
   # Make it faster by skipping some things
   skip_get_ec2_platforms      = true
