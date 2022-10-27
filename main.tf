@@ -40,3 +40,9 @@ module "testbucket1" {
   bucket = "c12etestbucket1"
   acl = "private"
 }
+
+module "testbucket2" {
+  source  = "terraform-aws-modules/s3-bucket/aws"
+  bucket = "c12etestbucket2"
+  acl = "private"
+}
