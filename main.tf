@@ -15,9 +15,9 @@ variable "SECRET_KEY" {
   type = string
 }
 
-variable "SESSION_TOKEN" {
-  type = string
-}
+# variable "SESSION_TOKEN" {
+#   type = string
+# }
 
 provider "aws" {
   # Configuration options
@@ -25,7 +25,7 @@ provider "aws" {
 
   access_key = var.ACCESS_KEY
   secret_key = var.SECRET_KEY
-  token = var.SESSION_TOKEN
+  # token = var.SESSION_TOKEN
 
   # Make it faster by skipping some things
   skip_get_ec2_platforms      = true
